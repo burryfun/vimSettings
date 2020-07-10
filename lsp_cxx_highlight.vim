@@ -12,6 +12,10 @@ highlight LspCxxHlSymVariable guifg=#61afef
 highlight LspCxxHlSymParameter guifg=#d19a66
 highlight cNumber guifg=#c678dd
 highlight cRepeat guifg=#E06C75
+highlight cppNumber guifg=#c678dd
+highlight cppStatement guifg=#E06C75
+highlight cConditional guifg=#E06C75
+highlight LspCxxHlSymMethod guifg=#98C379
 " to change the highlighting of a group add this to your vimrc.
 "
 " E.g. Change Preprocessor skipped regions to red bold text
