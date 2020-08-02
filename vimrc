@@ -16,17 +16,18 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-"Plugin 'ycm-core/YouCompleteMe'
+" Themes
 Plugin 'joshdick/onedark.vim'
-
 Plugin 'crusoexia/vim-monokai'
-
+" Autocompletion
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-
+" Tree explorer
 Plugin 'preservim/nerdtree'
-
+" Highlihts
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
+" livedown for markdown
+Plugin 'shime/vim-livedown'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,32 +68,17 @@ set number
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"let g:ycm_use_clangd = 1
-"let g:ycm_min_num_of_chars_for_completion = 1
-"let g:ycm_clangd_binary_path = '/usr/bin/clangd-9'
-"let g:ycm_clangd_uses_ycmd_caching = 0
-"let g:clang_cpp_options = '-std=c++17 -stdlib=libc++'
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "cpp":1,
-			\ "objc":1,
-			\ "sh":1,
-			\ "zsh":1,
-			\ "zimbu":1,
-			\ "python":1,
-			\ }
-"let g:ycm_complete_in_comments=1
-"let g:ycm_seed_identifiers_with_syntax=1
-"let g:ycm_cache_omnifunc=0
 set completeopt-=preview
 
+" Hotkeys
 noremap <a-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
 noremap <a-down> ddp
 
 "NerdTree mappings
 nmap <C-n> :NERDTreeToggle<CR>
 
+" Livedown on hotkey
+nnoremap <leader>ld :LivedownToggle<CR>
 
 
 " TextEdit might fail if hidden is not set.
